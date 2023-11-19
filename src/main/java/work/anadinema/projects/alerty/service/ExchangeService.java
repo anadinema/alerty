@@ -1,6 +1,6 @@
 package work.anadinema.projects.alerty.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import org.apache.http.HttpStatus;
 import work.anadinema.projects.alerty.model.ExchangeApiResponse;
 import java.io.IOException;
@@ -31,9 +31,8 @@ public class ExchangeService {
             throw new RuntimeException("Exchange API returned/concluded with non-successful response!");
         }
 
-        ObjectMapper mapper = new ObjectMapper();
-        ExchangeApiResponse exchangeApiResponse = mapper
-                .readValue(exchangeStringResponse.body(), ExchangeApiResponse.class);
+        ExchangeApiResponse exchangeApiResponse = new Gson()
+                .fromJson(exchangeStringResponse.body(), ExchangeApiResponse.class);
 
         if (isAboveThreshold(exchangeApiResponse)) {
             request = HttpRequest.newBuilder()

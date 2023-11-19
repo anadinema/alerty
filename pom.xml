@@ -17,7 +17,7 @@
         <azure-app-service-plan.name>ASP-alerty-ba18</azure-app-service-plan.name>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
-        <fasterxml-jackson.version>2.15.2</fasterxml-jackson.version>
+        <google-gson.version>2.10.1</google-gson.version>
         <lombok.version>1.18.28</lombok.version>
         <twilio-sdk.version>9.14.1</twilio-sdk.version>
         <junit-jupiter.version>5.4.2</junit-jupiter.version>
@@ -32,14 +32,9 @@
             <version>${azure.functions.java.library.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>${fasterxml-jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>${fasterxml-jackson.version}</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${google-gson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
