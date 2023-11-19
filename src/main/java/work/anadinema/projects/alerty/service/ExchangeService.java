@@ -60,6 +60,6 @@ public class ExchangeService {
         Double inrRate = Double.valueOf(exchangeApiResponse.getRates().getInr());
         Double sekRate = Double.valueOf(exchangeApiResponse.getRates().getSek());
 
-        return sekRate / inrRate >= Double.parseDouble(THRESHOLD);
+        return inrRate / sekRate >= Double.parseDouble(THRESHOLD);
     }
 }
