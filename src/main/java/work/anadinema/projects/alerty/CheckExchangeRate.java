@@ -11,7 +11,7 @@ public class CheckExchangeRate {
 
     @FunctionName("CheckExchangeRate")
     public void checkExchangeWithThreshold(
-        @TimerTrigger(name = "timerInfo", schedule = "0 */1 * * * *") String timerInfo,
+        @TimerTrigger(name = "timerInfo", schedule = "0 15 */8 * * *") String timerInfo,
         final ExecutionContext context
     ) {
         context.getLogger().info("Exchange rate check execution started at: " + LocalDateTime.now());
