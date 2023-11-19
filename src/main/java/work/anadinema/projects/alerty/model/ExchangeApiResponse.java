@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class ExchangeApiResponse {
 
-    private String status;
+    private Boolean status;
     private Long timestamp;
     private String base;
     private String date;
